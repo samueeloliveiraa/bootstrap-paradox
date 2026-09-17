@@ -15,6 +15,7 @@ struct Person{
 
 void timeTravel(struct Person *p){
     if(p->isTimeTraveler){
+        // create a conditional to update their atributes after time travel
         p->yoa = 1952;
         p->age = 55;
         strcpy(p->name, "Anna Lang");
