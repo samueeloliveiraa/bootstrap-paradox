@@ -13,3 +13,7 @@ The German sci-fi thriller Dark on Netflix follows four families in a small town
 ## What is the purpose of this repository?
 
 I’d like to reinforce some programming concepts through themes and audiovisual works that I enjoy. Both productions address the same subject, but at different levels. In my view, *Caddo Lake* is a good introduction to the Bootstrap paradox, while *Dark* is a more in-depth exploration of the topic. To understand what I’ll be discussing here, I recommend watching one of these two works. Enjoy have a great movie or episode!
+
+## How to compile and run the code ?
+You should use gcc caddo_lake.c -o caddo_lake && ./caddo_lake for *Caddo* and gcc winden.c -o winden && ./winden for *Winden*
+
