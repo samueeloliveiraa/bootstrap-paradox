@@ -15,12 +15,17 @@ struct Person{
 
 void timeTravel(struct Person *p){
     if(p->isTimeTraveler){
-        // create a conditional to update their atributes after time travel
-        p->yoa = 1952;
-        p->age = 55;
-        strcpy(p->name, "Anna Lang");
-        strcpy(p->partner, "Benjamim Lang");
-        printf("\n%s has traveled to the year %d.\n", p->name, p->yoa);
+        if(p->name == "Anna Bennet"){
+            p->yoa = 1952;
+            p->age = 55;
+            strcpy(p->name, "Anna Lang");
+            strcpy(p->partner, "Benjamim Lang");
+            printf("\n%s has traveled to the year %d.\n", p->name, p->yoa);
+        } 
+        if(p->name == "Paris Lang"){
+            p->yoa = 1952; // Paris has traveled to 1952 and then to 2024
+            printf("\n%s has traveled to the year %d.\n", p->name, p->yoa);
+        } 
     } 
     else {
         printf("\n%s is not a time traveler.\n", p->name);
@@ -30,9 +35,11 @@ void timeTravel(struct Person *p){
 // quantum entanglement function (results of familiar lineage from the time travel)
 
 int main(){
-    int currentYear = 2024;
+    int currentYear;
 
     // Anna
+
+    currentYear = 2024;
 
     struct Person person1;
 
@@ -48,8 +55,19 @@ int main(){
 
     printf ("\nAfter time travel:\n -name: %s\n -age: %d\n -partner: %s\n", person1.name, person1.age, person1.partner);
 
-    // Paris ...
+    // Paris 
 
+    currentYear = 2001;
+
+    struct Person person2;
+
+    strcpy(person2.name, "Paris Lang");
+    person2.age = 31;
+    person2.isTimeTraveler = true;
+
+    printf ("\n%s's current year is %d.\n", person2.name, currentYear);
+    // improve this function to call more than one time travel (paris travelled twice for exemple)
+    timeTravel(&person2);
 
     return 0;
     
