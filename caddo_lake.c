@@ -15,14 +15,14 @@ struct Person{
 
 void timeTravel(struct Person *p){
     if(p->isTimeTraveler){
-        if(p->name == "Anna Bennet"){
+        if(strcmp(p->name, "Anna Bennet") == 0){
             p->yoa = 1952;
             p->age = 55;
             strcpy(p->name, "Anna Lang");
             strcpy(p->partner, "Benjamim Lang");
             printf("\n%s has traveled to the year %d.\n", p->name, p->yoa);
         } 
-        if(p->name == "Paris Lang"){
+        if(strcmp(p->name, "Paris Lang") == 0){
             p->yoa = 1952; // Paris has traveled to 1952 and then to 2024
             printf("\n%s has traveled to the year %d.\n", p->name, p->yoa);
         } 
